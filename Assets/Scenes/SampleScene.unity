@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 956180711}
   - component: {fileID: 956180710}
   - component: {fileID: 956180709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5016,7 +5016,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1630254776}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fe5c50a06a130af4996b7804448da04a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
