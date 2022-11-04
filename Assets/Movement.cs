@@ -22,7 +22,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Physics2D.Raycast(transform.position,Vector2.down,RayDistance,JumpLayer))
+        float x = Input.GetAxis("Horizontal");
+        Move(x);
+        rotate();
+    }
+    public void Move(float x)
+    {
+        if(Physics2D.Raycast(transform.position,transform.TransformDirection(Vector2.down),RayDistance,JumpLayer))
         {
             CanJump = true;
         }
@@ -39,7 +45,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("Canjump",false);
         }
         if(CanJump == false){
-        float x = Input.GetAxis("Horizontal") * 0.5f;
+        x *= 0.5f;
         anim.SetFloat("Speed",Mathf.Abs(x));
         Vector2 pos = new Vector2(x*speed* Time.fixedDeltaTime,rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity,pos,ref velocity,t);
@@ -53,7 +59,6 @@ public class Movement : MonoBehaviour
         transform.localScale = flip;
         }
         if(CanJump == true){
-        float x = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed",Mathf.Abs(x));
         Vector2 pos = new Vector2(x*speed* Time.fixedDeltaTime,rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity,pos,ref velocity,t);
@@ -66,6 +71,11 @@ public class Movement : MonoBehaviour
         }
         transform.localScale = flip;
         }
-
+    }
+    public void rotate(){
+        RaycastHit2D hit = Physics2D.Raycast(transform.position,transform.TransformDirection(Vector2.down),RayDistance,JumpLayer);
+        if(hit.collider != null){
+            transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.FromToRotation(Vector3.up,hit.normal),1);
+        }
     }
 }
