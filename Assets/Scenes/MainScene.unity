@@ -934,12 +934,8 @@ GameObject:
   - component: {fileID: 2020308497}
   - component: {fileID: 2020308500}
   - component: {fileID: 2020308499}
-<<<<<<< HEAD
-  - component: {fileID: 2020308500}
-  m_Layer: 0
-=======
+  - component: {fileID: 2020308501}
   m_Layer: 6
->>>>>>> c127f4f53f09235dd0172c950c3c654f6367edad
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3354,21 +3350,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5646722, y: 0.64005303}
   m_EdgeRadius: 0
-<<<<<<< HEAD
-  m_Points:
-  - {x: 1.764777, y: -0.31632972}
-  - {x: 1.7797072, y: -0.3005626}
-  - {x: 2.821205, y: 0.79931706}
-  - {x: 4.3202524, y: 0.79943496}
-  - {x: 4.319705, y: -0.9596032}
-  - {x: -0.79922414, y: -0.9586841}
-  - {x: -0.79937416, y: -0.32054687}
-  - {x: 1.7592368, y: -0.3171223}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!114 &2020308500
+--- !u!114 &2020308501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3382,5 +3364,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 2020308498}
   camera: {fileID: 519420031}
-=======
->>>>>>> c127f4f53f09235dd0172c950c3c654f6367edad
