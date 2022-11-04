@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 2020308498}
   - component: {fileID: 2020308497}
   - component: {fileID: 2020308499}
+  - component: {fileID: 2020308500}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -3229,3 +3230,17 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &2020308500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020308494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0502ab2467c17ddf68c193314ac91093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 2020308498}
+  camera: {fileID: 519420031}
