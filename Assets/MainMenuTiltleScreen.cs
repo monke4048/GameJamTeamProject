@@ -13,7 +13,7 @@ public class MainMenuTiltleScreen : MonoBehaviour
     }
 
     //  Active and deactive
-    // GameOnject -> Use the new keyword if hiding was intended.
+    // GameObject -> Use the new keyword if hiding was intended.
     public Component[] components;
     public void ActiveAndDeactive()
     {
@@ -21,6 +21,14 @@ public class MainMenuTiltleScreen : MonoBehaviour
         {
             component.gameObject.SetActive(!component.gameObject.activeSelf);
         }
+    }
+
+    // redirect to a website
+    // e.g. https://www.google.com
+    public string url;
+    public void Redirect()
+    {
+        Application.OpenURL(url);
     }
 
     // Quit the game
